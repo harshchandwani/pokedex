@@ -1,9 +1,23 @@
 import React from 'react'
-
-const body = () => {
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import Browse from './Browse';
+import Modal from './Modal';
+const Body = () => {
+  const appRouter = createBrowserRouter([
+    {
+      path: "/",
+      element: <Browse />
+    },
+    {
+      path: "/pokemon/:pokemonId",
+      element: <Modal />
+    }
+  ])
   return (
-    <div>body</div>
+    <div>
+      <RouterProvider router={appRouter} />
+    </div>
   )
 }
 
-export default body
+export default Body;
