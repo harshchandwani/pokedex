@@ -16,9 +16,9 @@ const Browse = () => {
   return (
     <div className='mx-auto my-20 max-w-screen-lg'>
         <div className='flex items-center justify-between mx-10 my-4'>
-        <form className='flex mb-4'>
+        <form className='flex gap-10 mb-4'>
         <input
-            className='border-2 p-3 rounded-md min-w-[550px] text-md'
+            className='border-2 p-3 min-w-[550px] text-md'
             placeholder='Search'
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}

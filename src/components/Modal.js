@@ -19,10 +19,10 @@ const Modal = () => {
   const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
 
   return (
-    <div className='flex'>
+    <div className='flex pt-24 pr-8'>
       {/* Left Side */}
       <div className='w-1/2 p-8'>
-        <img src={pokemonImage} alt={capitalizedName} className='w-full' />
+        <img src={pokemonImage} alt={capitalizedName} className='w-full h-[60vh] pt-24' />
       </div>
 
       {/* Right Side */}

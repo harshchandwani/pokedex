@@ -23,7 +23,7 @@ const DropdownMenu = () => {
         <select
           value={selectedOption}
           onChange={(e) => handleOptionSelect(e.target.value)}
-          className="border-2 p-3 rounded-md text-md"
+          className="border-2 p-3 pr-2 text-md"
           style={{ width: '200px' }} // Adjust the width as needed
         >
           <option value="something">Type</option>

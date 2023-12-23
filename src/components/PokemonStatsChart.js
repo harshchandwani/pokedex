@@ -34,7 +34,7 @@ const PokemonStatsChart = ({ stats }) => {
 
   return (
     <div>
-      <h2>Pokemon Stats Bar Chart</h2>
+      <h2 className='font-semibold'>Pokemon Stats Bar Chart</h2>
       <Bar data={data} options={options}  />
     </div>
   );
