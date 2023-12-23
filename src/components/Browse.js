@@ -28,8 +28,10 @@ const Browse = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
         {filteredPokemonList.map((pokemon) => (
-         
-          <PokemonCard props={pokemon} key={pokemon.name}/>
+          <Link key={pokemon?.name} to={"/pokemon/" + pokemon?.name} pokemon={pokemon}>
+            <PokemonCard props={pokemon} key={pokemon.name}/>
+          </Link>
+          
         ))}
       </div>
 

@@ -9,7 +9,7 @@ const Body = () => {
       element: <Browse />
     },
     {
-      path: "/pokemon/:pokemonId",
+      path: "/pokemon/:pokemonName",
       element: <Modal />
     }
   ])

@@ -6,6 +6,8 @@ const pokemonSlice = createSlice({
         pokemons: null,
         next: "https://pokeapi.co/api/v2/pokemon",
         prev: null,
+        currentPokemon: null,
+        currentPokemonImage: null,
     },
     reducers: {
         addPokemons: (state, action) => {
@@ -16,10 +18,16 @@ const pokemonSlice = createSlice({
         },
         updatePrev: (state, action) => {
             state.prev = action.payload;
+        },
+        addCurrentPokemon: (state, action) => {
+            state.currentPokemon = action.payload;
+        },
+        addCurrentPokemonImage: (state, action) => {
+            state.currentPokemonImage = action.payload;
         }
 
     }
 })
 
-export const { addPokemons, updateNext, updatePrev } = pokemonSlice.actions;
+export const { addPokemons, updateNext, updatePrev, addCurrentPokemon, addCurrentPokemonImage} = pokemonSlice.actions;
 export default pokemonSlice.reducer;
