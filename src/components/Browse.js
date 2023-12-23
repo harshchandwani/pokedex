@@ -18,22 +18,25 @@ const Browse = () => {
         <div className='flex items-center justify-between mx-10 my-4'>
         <form className='flex mb-4'>
         <input
-            className='border-2  p-3 rounded-md min-w-[550px] text-md'
+            className='border-2 p-3 rounded-md min-w-[550px] text-md'
             placeholder='Search'
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-        </form>
+        
         <DropdownMenu />
+        </form>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
         {filteredPokemonList.map((pokemon) => (
           <Link key={pokemon?.name} to={"/pokemon/" + pokemon?.name} pokemon={pokemon}>
-            <PokemonCard props={pokemon} key={pokemon.name}/>
+            <div className="w-full">
+              <PokemonCard props={pokemon} key={pokemon.name} />
+            </div>
           </Link>
-          
         ))}
       </div>
+
 
       <div className="flex justify-between mx-10 my-4">
         <button onClick={loadPrevPage} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">

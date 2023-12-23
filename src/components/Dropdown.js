@@ -26,7 +26,7 @@ const DropdownMenu = () => {
           className="border-2 p-3 rounded-md text-md"
           style={{ width: '200px' }} // Adjust the width as needed
         >
-          <option value="">Type</option>
+          <option value="something">Type</option>
           {options.map((option, index) => (
             <option key={index} value={option}>
               {option}
